@@ -1,8 +1,8 @@
-## build matrix obects that can cache their inverse when
+## build matrix objects that can cache their inverse when
 ## it is computed, so as to avoid repeating costly computations
 
-## makeCacheMatrix builds a matrix object that has a caching 
-## feature, enabling it to store the value of its inverse
+## makeCacheMatrix builds a matrix object with caching 
+## enabling it to store the value of its inverse
 makeCacheMatrix <- function(x = matrix()) {
 
     ## attributes
@@ -13,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
     # getter for original matrix
     get <- function() x
     # getter for cached inverse matrix
-    getsolve <- function() m
+    getsolve <- function() s
 
     ## setters
     # setter for the matrix data, (resets the cached inverse)
